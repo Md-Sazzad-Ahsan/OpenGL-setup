@@ -9,7 +9,7 @@ This setup automates the installation and configuration of the OpenGL developmen
 Manually setting up OpenGL for Code::Blocks can be tedious. This automated script:
 
 - Installs Code::Blocks silently
-- Copies necessary OpenGL (GLUT) files to correct system locations
+- Copies necessary OpenGL (GLUT) files to correct system locations automatically 
 - Sets up the environment variables automatically
 - Supports both 32-bit and 64-bit systems
 
@@ -42,7 +42,7 @@ After completion, you will see:
    ``` C:\Program Files (x86)\CodeBlocks\MinGW ```
 6. After creating the project, go to the **Project menu >Select the project >right click and select- Build Options**
 7. Under the **Linker settings** tab:
-   - Click the **Add** button and add the following libraries:
+   - Click the **Add** button and add the following libraries(does not need to paste the full path):
      ```
      opengl32
      glu32
@@ -62,12 +62,13 @@ After completion, you will see:
 
 ## Run the Code
 
-On your left, put the mouse icon on top of Project/Files/Sources/  similar scrollbar and scroll your mouse wheel slowly, it will show your project name with **Source** inside. Click on Source to reveal the main.cpp file.
+On your left, put the mouse icon on top of **Project/Files/Sources/Anything**  similar scrollbar and scroll your **mouse wheel** slowly, it will show your project name with **Source** inside. Click on Source to reveal the **main.cpp** file.
 
 Double click to open the **main.cpp** file.
 
 Now add the following code into the 14th line of main.cpp :
-```#include<window.h>```
+
+```#include<windows.h>```
 
 press **F9** from your keyboard or click **build & run** icon from the top bar to run the program.
 
@@ -78,8 +79,8 @@ press **F9** from your keyboard or click **build & run** icon from the top bar t
 - Make sure to **run `setup.bat` as Administrator**, or the installation may fail.
 - Internet connection is required for downloading some files from Google Drive during setup.
 - If Code::Blocks is already installed, the script will still configure the OpenGL files correctly.
-- If codeblock installation fails for any reason, just delete the folder called "CodeBlock" from C:\Windows\Program Files (x86)\  and try again.
-- If you see any windows defender security popup during installation, just click "More Info" and then select Aggree/ Install Anyway to run the script.
+- If codeblock installation fails for any reason, just delete the folder called **"CodeBlock"** from **C:\Program Files (x86)\CodeBlocks**  and try again.
+- If you see any windows defender security popup during installation, just click "More Info" and then select **Accept / Install Anyway** to run the script.
 
 ---
 
